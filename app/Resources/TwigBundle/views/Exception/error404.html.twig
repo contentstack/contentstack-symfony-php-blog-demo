@@ -1,0 +1,18 @@
+{# app/Resources/TwigBundle/views/Exception/error404.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-12 errorPage">
+                        <h1>Page not found</h1>
+                        <p> The requested page couldn't be located. Please return to the <a href="{{ path('blog_list') }}" title="Go to Blog Home Page">Blog home </a> page.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

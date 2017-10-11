@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+{% block title %}  Welcome to the Symfony world! {% endblock %}
+{% block body %}
+<div id="main">
+   <div class="container">
+      <div class="row">
+         <!-- Blog Post Start -->
+         <div class="col-md-12">
+            <div class="col-md-12 page-body">
+               <div class="row">
+                   {{ include('partials/header.html.twig') }}
+                  <div class="col-md-12 content-page">
+                     <div class="col-md-12 blog-post">
+                        {% if uid.featured_image %}
+                        <div class="single-image">
+                           <img src="{{uid.featured_image.url}}" />
+                        </div>
+                        {% endif %}  
+                        <!-- Post Headline Start -->
+                        <div class="post-title">
+                           <h1>{{uid.title}}</h1>
+                        </div>
+                        <!-- Post Detail Start -->
+                        <div class="post-info">
+                           <span>{{ uid.date|date('F j, Y') }} / by <a href="#" target="_blank">
+                           {% for authorName in uid.author %}
+                           {{authorName.first_name}} {{authorName.last_name}}
+                           {% endfor %}
+                           </a></span>
+                        </div>
+                        {{uid.full_description|raw}}
+                     </div>
+                  </div>
+               </div>
+            </div>
+            {{ include('partials/footer.html.twig') }}
+         </div>
+         <!-- Blog Post End -->
+      </div>
+   </div>
+</div>
+{% endblock %}
