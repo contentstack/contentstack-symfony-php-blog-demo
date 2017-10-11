@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>{% block title %} {% endblock %}</title>
+      <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}" />
+      <!-- Google Web Fonts  -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700">
+      <!-- Bootstrap CSS -->
+      {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/lib.css')}}">
+        <link rel="stylesheet" href="{{ asset('css/style.css')}}">
+      {% endblock %}
+   </head>
+   <body>
+      {% block body %}{% endblock %}
+      <!-- Back to Top Start -->
+      <a href="#" class="scroll-to-top">
+        <i class="fa fa-long-arrow-up"></i>
+      </a>
+      <!-- Back to Top End -->
+   </body>
+   <!-- All Javascript files  -->
+   {% block javascripts %}
+    <script type="text/javascript" src="{{ asset('js/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('js/lib.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('js/scripts.js')}}"></script>
+   {% endblock %}
+</html>

@@ -1,0 +1,14 @@
+<!-- Footer Start -->
+<div class="col-md-12 page-body margin-top-50 footer">
+    <footer>
+        <ul class="menu-link">
+            {% for footerDetail in footer.footer_navigation %}
+                <li>
+                    <a href="{{footerDetail.link}}">{{footerDetail.title}}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <p>{{footer.copyright}}</p>
+    </footer>
+</div>
+<!-- Footer End -->

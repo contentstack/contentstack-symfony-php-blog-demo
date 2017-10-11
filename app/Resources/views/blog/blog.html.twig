@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+{% block title %}  Welcome to the Symfony world! {% endblock %}
+{% block body %}
+<div id="main">
+   <div class="container">
+      <div class="row">
+         <!-- Blog Post Start -->
+         <div class="col-md-12">
+            <div class="col-md-12 page-body">
+               <div class="row">
+                    {{ include('partials/header.html.twig') }}
+                  <div class="col-md-12 content-page">
+                     <!-- Blog Post Start -->   
+                     {% for post in results %}
+                     <div class="col-md-12 blog-post">
+                        <div class="post-title">
+                           <a href="/blog/{{post.uid}}">
+                              <h1>{{post.title}}</h1>
+                           </a>
+                        </div>
+                        <div class="post-info">
+                           <span>{{ post.date|date('F j, Y') }} / by 
+                           <a href="#" target="_blank">
+                            {% for authorName in post.author %}
+                                {{authorName.first_name}} {{authorName.last_name}}
+                            {% endfor %}
+                           </a>
+                           </span>
+                        </div>
+                        {% if post.featured_image %}
+                        <div class="post-image">
+                           <img src="{{post.featured_image.url}}" />
+                        </div>
+                        {% endif %}  
+                        <div class="post-desc">
+                           <p>{{post.short_description}}</p>
+                           <a href="/blog/{{post.uid}}" class="button button-style button-anim fa fa-long-arrow-right">
+                           <span>Read More</span>
+                           </a>
+                        </div>
+                     </div>
+                     {% endfor %}
+                     <!-- Blog Post End -->
+                     <div class="col-md-12 text-center">
+                        <a href="javascript:void(0)" id="load-more-post" class="load-more-button">Load</a>
+                        <div id="post-end-message"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+             {{ include('partials/footer.html.twig') }}
+         </div>
+         <!-- Blog Post End -->
+      </div>
+   </div>
+</div>
+{% endblock %}
