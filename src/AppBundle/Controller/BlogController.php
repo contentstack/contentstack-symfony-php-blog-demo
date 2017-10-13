@@ -8,10 +8,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Contentstack\Contentstack;
-include_once "../src/contentstack-php/lib/index.php";
+require_once dirname(__DIR__).'/contentstack-php/lib/index.php';
 
 class BlogController extends Controller
-{ 
+{
     /**
      * Matches /blog exactly
      *
@@ -35,7 +35,7 @@ class BlogController extends Controller
                 'header' => $header[0][0],
                 'footer' => $footers[0][0]
             ));
-           
+
     }
 
 
@@ -65,7 +65,7 @@ class BlogController extends Controller
             'header' => $header[0][0],
             'footer' => $footers[0][0]
             ));
-        
+
     }
 
 }
