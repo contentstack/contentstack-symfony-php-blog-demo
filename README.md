@@ -19,7 +19,7 @@ You can check the [live demo](https://cs-symfony-blog-demo.herokuapp.com/blog) t
 
 We have created an in-depth tutorial on how you can create a website using Contentstack’s PHP SDK and Symfony framework. By following the steps given in the tutorial, you can design a website similar to the one given in the demo.
 
-[Blog demo using Contentstack's PHP SDK and Symfony framework](https://www.contentstack.com/docs/example-apps/build-a-blog-demo-using-contentstack-s-php-sdk-and-symfony-framework)
+[Blog demo using Contentstack's PHP SDK and Symfony framework](https://www.contentstack.com/docs/example-apps/build-a-blog-demo-using-contentstacks-php-sdk-and-symfony-framework)
 
 
 
