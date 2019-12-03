@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Contentstack\Contentstack;
-require_once dirname(__DIR__).'/contentstack-php/lib/index.php';
+require_once dirname(__DIR__).'/contentstack-php/src/index.php';
 
 class BlogController extends Controller
 {
